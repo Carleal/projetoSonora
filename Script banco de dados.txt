@@ -1,0 +1,56 @@
+create database projeto
+default character set utf8
+default collate utf8_general_ci;
+use projeto;
+
+create table cidades(
+	id int not null auto_increment,
+	nome varchar(30) not null,
+	primary key (id)
+) default charset = utf8;
+
+create table produtos(
+	Id int not null auto_increment,
+	Nome_produto varchar(100) not null,
+	Valor_Produto decimal(7,2),
+	Estoque int,
+	Cidade int,
+	primary key (Id),
+	foreign key (Cidade) references cidades (id)
+) default charset = utf8;
+
+insert into cidades values(1,"Uberlândia");
+insert into cidades values(2,"Uberaba");
+insert into cidades values(3,"Araguari");
+insert into cidades values(4,"Ituiutaba");
+insert into cidades values(5,"Frutal");
+insert into cidades values(6,"Iturama");
+insert into cidades values(7,"Prata");
+insert into cidades values(8,"Conceição das Alagoas");
+insert into cidades values(9,"Tupaciguara");
+insert into cidades values(10,"Monte Alegre de Minas");
+insert into cidades values(11,"Campina Verde");
+insert into cidades values(12,"Santa Vitória");
+insert into cidades values(13,"Fronteira");
+insert into cidades values(14,"Capinópolis");
+insert into cidades values(15,"Itapagipe");
+insert into cidades values(16,"Canápolis");
+insert into cidades values(17,"Planura");
+insert into cidades values(18,"Centralina");
+insert into cidades values(19,"Carneirinho");
+insert into cidades values(20,"Delta");
+insert into cidades values(21,"Campo Florido");
+insert into cidades values(22,"Limeira do Oeste");
+insert into cidades values(23,"Conquista");
+insert into cidades values(24,"Indianópolis");
+insert into cidades values(25,"Araporã");
+insert into cidades values(26,"São Francisco de Sales");
+insert into cidades values(27,"Gurinhatã");
+insert into cidades values(28,"Pirajuba");
+insert into cidades values(29,"União de Minas");
+insert into cidades values(30,"Ipiaçu");
+insert into cidades values(31,"Verissímo");
+insert into cidades values(32,"Comendador Gomes");
+insert into cidades values(33,"Cascalho Rico");
+insert into cidades values(34,"Cachoeira Dourada");
+insert into cidades values(35,"Água Comprida");
